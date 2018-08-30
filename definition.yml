@@ -1,6 +1,6 @@
 id: shuffle
-docker_repository: dynverse/dynmethods:shuffle
-container_url: https://github.com/dynverse/dynmethods/tree/master/containers/shuffle
+docker_repository: dynverse/ti_shuffle
+container_url: https://github.com/dynverse/ti_shuffle
 name: 'Control: shuffle'
 type: control_test
 platform: R
