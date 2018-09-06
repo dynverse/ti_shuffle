@@ -1,5 +1,6 @@
 id: shuffle
 docker_repository: dynverse/ti_shuffle
+singularity_collection: 1578
 container_url: https://github.com/dynverse/ti_shuffle
 name: 'Control: shuffle'
 type: control_test
