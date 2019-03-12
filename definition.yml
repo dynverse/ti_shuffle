@@ -1,36 +1,34 @@
-id: shuffle
-docker_repository: dynverse/ti_shuffle
-singularity_collection: 1578
-container_url: https://github.com/dynverse/ti_shuffle
-name: Shuffle
-source: control
-platform: R
-trajectory_types:
-- cycle
-- linear
-- bifurcation
-- convergence
-- multifurcation
-- tree
-- acyclic_graph
-- graph
-- disconnected_graph
-topology_inference: free
-parameters:
-  dummy_param:
-    type: numeric
-    default: 0.5
-    upper: 1.0
-    lower: 0.0e+00
-    description: Dummy parameter
-input:
-  format: rds
-  required:
+method:
+  id: shuffle
+  name: shuffle
+  tool_id: shuffle
+  source: control
+  platform: R
+
+container:
+  url: https://github.com/dynverse/ti_shuffle
+  docker: dynverse/ti_shuffle
+
+wrapper:
+  type: trajectory
+  topology_inference: free
+  trajectory_types:
+  - cycle
+  - linear
+  - bifurcation
+  - convergence
+  - multifurcation
+  - tree
+  - acyclic_graph
+  - graph
+  - disconnected_graph
+  example: /code/example.R
+  input_required:
   - counts
   - dataset
-output:
-  format: rds
-  outputs:
-  - trajectory
-  - timings
-wrapper_type: trajectory
+
+parameters:
+  - id: dummy_param
+    type: logical
+    default: yes
+    description: Dummy parameter
