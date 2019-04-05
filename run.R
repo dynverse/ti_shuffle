@@ -2,8 +2,8 @@
 
 task <- dyncli::main()
 
-library(dplyr)
-library(purrr)
+library(dplyr, warn.conflicts = FALSE)
+library(purrr, warn.conflicts = FALSE)
 
 #   ____________________________________________________________________________
 #   Load data                                                               ####
