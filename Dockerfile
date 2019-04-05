@@ -1,5 +1,7 @@
 FROM dynverse/dynwrapr:v0.1.0
 
-COPY definition.yml run.R example.h5 /code/
+ARG GITHUB_PAT
+
+COPY definition.yml run.R example.sh /code/
 
 ENTRYPOINT ["/code/run.R"]
